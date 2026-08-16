@@ -1,0 +1,157 @@
+{
+  "navbar": {
+    "home": "الرئيسية",
+    "about": "عني",
+    "skills": "المهارات",
+    "projects": "المشاريع",
+    "experience": "الخبرة",
+    "contact": "تواصل معي",
+    "download_cv": "تحميل السيرة الذاتية"
+  },
+  "hero": {
+    "greeting": "مرحباً، أنا",
+    "name": "علي الزهرات",
+    "role": "مهندس حاسوب | مطور برمجيات وواجهات خلفية",
+    "description": "شغوف بهندسة البرمجيات، حل المشكلات المعقدة، وبناء أنظمة قوية وفعالة باستخدام أحدث التقنيات.",
+    "view_projects": "تصفح المشاريع",
+    "contact_me": "تواصل معي"
+  },
+  "about": {
+    "title": "من أنا",
+    "subtitle": "مطور برمجيات متحمس لبناء حلول قابلة للتطوير وفعالة.",
+    "p1": "أنا طالب هندسة حاسوب في جامعة بارتن (Bartın University) شغوف ببناء أنظمة برمجية عالية الأداء وقابلة للتوسع. أركز على تطوير الواجهات الخلفية (Backend) وبناء معمارية برمجيات نظيفة وفعالة.",
+    "p2": "لدي خبرة عملية في استخدام لغات مثل Java, C++, TypeScript, Python وتطوير الواجهات باستخدام React & Next.js. كما أنني مهتم بمجالات الذكاء الاصطناعي وتطبيقاته.",
+    "p3": "أحب استكشاف التقنيات الجديدة ومشاركة معرفتي مع مجتمع المطورين، وأسعى دائماً لكتابة كود نظيف ومستدام يحل مشاكل حقيقية."
+  },
+  "skills": {
+    "title": "المهارات التقنية",
+    "subtitle": "التقنيات والأدوات التي أستخدمها في بناء الحلول البرمجية.",
+    "categories": {
+      "languages": "لغات البرمجة",
+      "frontend": "تطوير الواجهات الأمامية",
+      "backend": "الواجهات الخلفية وقواعد البيانات",
+      "tools": "الأدوات والممارسات"
+    },
+    "items": {
+      "languages": "Java,JavaScript,TypeScript,C/C++,Python,REACT",
+      "backend": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "MongoDB Atlas",
+        "SQL",
+        "RESTful APIs"
+      ],
+      "tools": [
+        "Git & GitHub",
+        "Linux (GRUB, Bash)",
+        "Raspberry Pi",
+        "Roboflow (CV)",
+        "Docker"
+      ]
+    }
+  },
+  "projects": {
+    "title": "أبرز المشاريع",
+    "subtitle": "مجموعة من المشاريع التي قمت بتطويرها لإيجاد حلول عملية.",
+    "view_code": "الكود المصدري",
+    "live_demo": "معاينة حية",
+    "view_all": "عرض جميع المشاريع",
+    "items": {
+      "n8n_automation": {
+        "title": "أتمتة إرسال البريد الإلكتروني عبر n8n",
+        "description": "نظام مؤتمت لإرسال طلبات التوظيف والسير الذاتية المخصصة باستخدام سير عمل n8n.",
+        "tags": [
+          "n8n",
+          "Automation",
+          "Node.js",
+          "JSON"
+        ],
+        "github": "https://github.com/zahrat-code/n8n-Email-automation-send",
+        "live": "",
+        "color": "from-blue-500/20 to-indigo-500/20"
+      },
+      "route_finder": {
+        "title": "مكتشف المسار الذكي في الشبكات",
+        "description": "تطبيق لتحديد المسار الذكي في الشبكات يعتمد على لغة بايثون لحساب وتصور أفضل مسارات التوجيه.",
+        "tags": [
+          "Python",
+          "Algorithms",
+          "Network Routing",
+          "Pathfinding"
+        ],
+        "github": "https://github.com/zahrat-code/Smart_Route_Finder_in_Networks",
+        "live": "",
+        "color": "from-purple-500/20 to-pink-500/20"
+      },
+      "dental_clinic": {
+        "title": "نظام قاعدة بيانات عيادة الأسنان",
+        "description": "نظام شامل لإدارة قواعد بيانات عيادات طب الأسنان مصمم بلغة C# لإدارة سجلات المرضى والمواعيد وتاريخ العلاج.",
+        "tags": [
+          "C#",
+          "SQL Server",
+          "Database",
+          "Desktop App"
+        ],
+        "github": "https://github.com/zahrat-code/Dis_Klinik_Veritabani",
+        "live": "",
+        "color": "from-emerald-500/20 to-teal-500/20"
+      },
+      "computer_science": {
+        "title": "منهج OSSU لعلوم الحاسوب",
+        "description": "منهج دراسي متكامل للحصول على تعليم ذاتي بمستوى بكالوريوس في علوم الحاسوب باستخدام مساقات جامعية مجانية عبر الإنترنت.",
+        "tags": [
+          "Computer Science",
+          "Education",
+          "Self-Study",
+          "OSS"
+        ],
+        "github": "https://github.com/zahrat-code/computer-science",
+        "live": "",
+        "color": "from-orange-500/20 to-amber-500/20"
+      }
+    }
+  },
+  "experience": {
+    "title": "الخبرة والتعليم",
+    "subtitle": "مسيرتي الأكاديمية والمهنية في مجال التكنولوجيا.",
+    "education_title": "التعليم الأكاديمي",
+    "experience_title": "الخبرة العملية",
+    "items": {
+      "university": {
+        "title": "بكالوريوس هندسة الحاسوب",
+        "org": "جامعة بارتن (Bartın University)",
+        "date": "2023 - الحاضر",
+        "desc": "دراسة متعمقة في هندسة البرمجيات، الخوارزميات، هياكل البيانات، أنظمة التشغيل، وشبكات الحاسوب. تطوير مشاريع أكاديمية باستخدام C/C++ و Java."
+      },
+      "freelance": {
+        "title": "مطور ويب مستقل (Freelancer)",
+        "org": "عمل حر",
+        "date": "2022 - الحاضر",
+        "desc": "تطوير مواقع وتطبيقات ويب مخصصة للعملاء باستخدام تقنيات حديثة مثل React, Next.js, Node.js. تصميم وبناء لوحات تحكم، أنظمة إدارة محتوى (CMS)، ومنصات تجارة إلكترونية."
+      }
+    }
+  },
+  "contact": {
+    "title": "تواصل معي",
+    "subtitle": "",
+    "form": {
+      "name": "الاسم",
+      "name_placeholder": "اسمك الكريم",
+      "email": "البريد الإلكتروني",
+      "email_placeholder": "example@domain.com",
+      "message": "الرسالة",
+      "message_placeholder": "كيف يمكنني مساعدتك؟",
+      "submit": "إرسال الرسالة"
+    },
+    "info": {
+      "title": "دعنا نبني شيئاً رائعاً معاً",
+      "desc": "أنا دائماً منفتح على مناقشة تطوير البرمجيات، تصميم الأنظمة الموزعة، أو أي فرص للتعاون في مشاريع تقنية مبتكرة.",
+      "email_label": "راسلني عبر الإيميل"
+    },
+    "footer": {
+      "rights": "جميع الحقوق محفوظة.",
+      "built_with": "تم البناء باستخدام Next.js و Tailwind CSS"
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "download_cv": "Download CV"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Ali Al-zahrat",
+    "role": "Computer Engineering | Software & Backend Developer",
+    "description": "Passionate about software engineering, solving complex problems, and building robust, efficient systems using cutting-edge technologies.",
+    "view_projects": "View Projects",
+    "contact_me": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Software developer enthusiastic about building scalable and efficient solutions.",
+    "p1": "I am a Computer Engineering student at Bartın University, passionate about building high-performance, scalable software systems. I focus on backend development and building clean, efficient software architectures.",
+    "p2": "I have practical experience using languages like Java, C++, TypeScript, Python, and frontend development with React & Next.js. I'm also interested in Artificial Intelligence and its applications.",
+    "p3": "I love exploring new technologies, sharing knowledge with the developer community, and always strive to write clean, sustainable code that solves real-world problems."
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Technologies and tools I use to build software solutions.",
+    "categories": {
+      "languages": "Programming Languages",
+      "frontend": "Frontend Development",
+      "backend": "Backend & Databases",
+      "tools": "Tools & Practices"
+    },
+    "items": {
+      "languages": [
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "C/C++",
+        "Python"
+      ],
+      "backend": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "MongoDB Atlas",
+        "SQL",
+        "RESTful APIs"
+      ],
+      "tools": [
+        "Git & GitHub",
+        "Linux (GRUB, Bash)",
+        "Raspberry Pi",
+        "Roboflow (CV)",
+        "Docker"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A collection of projects I developed to create practical solutions.",
+    "view_code": "Source Code",
+    "live_demo": "Live Demo",
+    "view_all": "View All Projects",
+    "items": {
+      "n8n_automation": {
+        "title": "n8n Email Automation Send",
+        "description": "Automated system to send personalized job applications and CVs using n8n workflows.",
+        "tags": [
+          "n8n",
+          "Automation",
+          "Node.js",
+          "JSON"
+        ],
+        "github": "https://github.com/zahrat-code/n8n-Email-automation-send",
+        "live": "",
+        "color": "from-blue-500/20 to-indigo-500/20"
+      },
+      "route_finder": {
+        "title": "Smart Route Finder in Networks",
+        "description": "Python-based pathfinding application designed to calculate and visualize the smartest and most optimal routing paths within network topologies.",
+        "tags": [
+          "Python",
+          "Algorithms",
+          "Network Routing",
+          "Pathfinding"
+        ],
+        "github": "https://github.com/zahrat-code/Smart_Route_Finder_in_Networks",
+        "live": "",
+        "color": "from-purple-500/20 to-pink-500/20"
+      },
+      "dental_clinic": {
+        "title": "Dental Clinic Database System",
+        "description": "A comprehensive database management system designed in C# for dental clinics to manage patient records, appointments, and treatment history.",
+        "tags": [
+          "C#",
+          "SQL Server",
+          "Database",
+          "Desktop App"
+        ],
+        "github": "https://github.com/zahrat-code/Dis_Klinik_Veritabani",
+        "live": "",
+        "color": "from-emerald-500/20 to-teal-500/20"
+      },
+      "computer_science": {
+        "title": "OSSU Computer Science Curriculum",
+        "description": "A complete curriculum path for a self-taught B.Sc. level education in Computer Science using free online university courses.",
+        "tags": [
+          "Computer Science",
+          "Education",
+          "Self-Study",
+          "OSS"
+        ],
+        "github": "https://github.com/zahrat-code/computer-science",
+        "live": "",
+        "color": "from-orange-500/20 to-amber-500/20"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience & Education",
+    "subtitle": "My academic and professional journey in technology.",
+    "education_title": "Academic Education",
+    "experience_title": "Professional Experience",
+    "items": {
+      "university": {
+        "title": "B.Sc. Computer Engineering",
+        "org": "Bartın University",
+        "date": "2023 - Present",
+        "desc": "In-depth study of software engineering, algorithms, data structures, operating systems, and computer networks. Developing academic projects using C/C++ and Java."
+      },
+      "freelance": {
+        "title": "Freelance Web Developer",
+        "org": "Freelance",
+        "date": "2022 - Present",
+        "desc": "Developing custom web applications and sites for clients using modern technologies like React, Next.js, Node.js. Designing and building admin panels, CMS, and e-commerce platforms."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "Your Name",
+      "email": "Email",
+      "email_placeholder": "example@domain.com",
+      "message": "Message",
+      "message_placeholder": "How can I help you?",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Let's build something great together",
+      "desc": "I am always open to discussing software development, distributed systems design, or any collaborative opportunities in innovative tech projects.",
+      "email_label": "Email Me"
+    },
+    "footer": {
+      "rights": "All rights reserved.",
+      "built_with": "Built with Next.js and Tailwind CSS"
+    }
+  }
+}

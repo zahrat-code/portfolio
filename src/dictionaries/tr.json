@@ -1,0 +1,163 @@
+{
+  "navbar": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "skills": "Yetenekler",
+    "projects": "Projeler",
+    "experience": "Deneyim",
+    "contact": "İletişim",
+    "download_cv": "CV İndir"
+  },
+  "hero": {
+    "greeting": "Merhaba, Ben",
+    "name": "Ali Al-zahrat",
+    "role": "Yazılım ve Arka Uç Geliştiricisi | Bilgisayar Mühendisliği",
+    "description": "Yazılım mühendisliğine, karmaşık sorunları çözmeye ve en son teknolojileri kullanarak sağlam, verimli sistemler oluşturmaya tutkuluyum.",
+    "view_projects": "Projeleri Gör",
+    "contact_me": "Benimle İletişime Geç"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "subtitle": "Ölçeklenebilir ve verimli çözümler üretmeye hevesli yazılım geliştiricisi.",
+    "p1": "Bartın Üniversitesi'nde Bilgisayar Mühendisliği öğrencisiyim. Yüksek performanslı ve ölçeklenebilir yazılım sistemleri oluşturmaya tutkuluyum. Arka uç (Backend) geliştirmeye ve temiz, verimli yazılım mimarileri kurmaya odaklanıyorum.",
+    "p2": "Java, C++, TypeScript, Python gibi dilleri kullanmada pratik deneyime sahibim ve React & Next.js ile ön yüz geliştirme yapıyorum. Ayrıca Yapay Zeka ve uygulamalarına da ilgi duyuyorum.",
+    "p3": "Yeni teknolojileri keşfetmeyi, bilgilerimi geliştirici topluluğuyla paylaşmayı seviyorum ve her zaman gerçek dünya sorunlarını çözen temiz, sürdürülebilir kod yazmaya çalışıyorum."
+  },
+  "skills": {
+    "title": "Teknik Yetenekler",
+    "subtitle": "Yazılım çözümleri oluşturmak için kullandığım teknolojiler ve araçlar.",
+    "categories": {
+      "languages": "Programlama Dilleri",
+      "frontend": "Ön Yüz Geliştirme",
+      "backend": "Arka Uç ve Veritabanları",
+      "tools": "Araçlar ve Uygulamalar"
+    },
+    "items": {
+      "languages": [
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "C/C++",
+        "Python"
+      ],
+      "backend": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "MongoDB Atlas",
+        "SQL",
+        "RESTful APIs"
+      ],
+      "tools": [
+        "Git & GitHub",
+        "Linux (GRUB, Bash)",
+        "Raspberry Pi",
+        "Roboflow (CV)",
+        "Docker"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Öne Çıkan Projeler",
+    "subtitle": "Pratik çözümler üretmek için geliştirdiğim projeler koleksiyonu.",
+    "view_code": "Kaynak Kod",
+    "live_demo": "Canlı Önizleme",
+    "view_all": "Tüm Projeleri Gör",
+    "items": {
+      "n8n_automation": {
+        "title": "n8n E-posta Otomasyonu Gönderimi",
+        "description": "n8n iş akışlarını kullanarak kişiselleştirilmiş iş başvuruları ve CV'ler gönderen otomatik sistem.",
+        "tags": [
+          "n8n",
+          "Automation",
+          "Node.js",
+          "JSON"
+        ],
+        "github": "https://github.com/zahrat-code/n8n-Email-automation-send",
+        "live": "",
+        "color": "from-blue-500/20 to-indigo-500/20"
+      },
+      "route_finder": {
+        "title": "Ağlarda Akıllı Rota Bulucu",
+        "description": "Ağ topolojileri içinde en akıllı ve en optimize yönlendirme rotalarını hesaplamak ve görselleştirmek için tasarlanmış Python tabanlı yol bulma uygulaması.",
+        "tags": [
+          "Python",
+          "Algorithms",
+          "Network Routing",
+          "Pathfinding"
+        ],
+        "github": "https://github.com/zahrat-code/Smart_Route_Finder_in_Networks",
+        "live": "",
+        "color": "from-purple-500/20 to-pink-500/20"
+      },
+      "dental_clinic": {
+        "title": "Diş Kliniği Veritabanı Sistemi",
+        "description": "Diş klinikleri için hasta kayıtları, randevular ve tedavi geçmişini yönetmeye yönelik C# diliyle geliştirilmiş kapsamlı veritabanı yönetim sistemi.",
+        "tags": [
+          "C#",
+          "SQL Server",
+          "Database",
+          "Desktop App"
+        ],
+        "github": "https://github.com/zahrat-code/Dis_Klinik_Veritabani",
+        "live": "",
+        "color": "from-emerald-500/20 to-teal-500/20"
+      },
+      "computer_science": {
+        "title": "OSSU Bilgisayar Bilimleri Müfredatı",
+        "description": "Ücretsiz çevrimiçi üniversite derslerini kullanarak Bilgisayar Bilimlerinde lisans düzeyinde kendi kendine eğitim için eksiksiz müfredat yolu.",
+        "tags": [
+          "Computer Science",
+          "Education",
+          "Self-Study",
+          "OSS"
+        ],
+        "github": "https://github.com/zahrat-code/computer-science",
+        "live": "",
+        "color": "from-orange-500/20 to-amber-500/20"
+      }
+    }
+  },
+  "experience": {
+    "title": "Deneyim & Eğitim",
+    "subtitle": "Teknoloji alanındaki akademik ve profesyonel yolculuğum.",
+    "education_title": "Akademik Eğitim",
+    "experience_title": "Profesyonel Deneyim",
+    "items": {
+      "university": {
+        "title": "Bilgisayar Mühendisliği Lisans",
+        "org": "Bartın Üniversitesi",
+        "date": "2023 - Günümüz",
+        "desc": "Yazılım mühendisliği, algoritmalar, veri yapıları, işletim sistemleri ve bilgisayar ağları üzerine derinlemesine çalışma. C/C++ ve Java kullanarak akademik projeler geliştirme."
+      },
+      "freelance": {
+        "title": "Serbest Web Geliştiricisi",
+        "org": "Serbest (Freelance)",
+        "date": "2022 - Günümüz",
+        "desc": "React, Next.js, Node.js gibi modern teknolojileri kullanarak müşteriler için özel web uygulamaları ve siteleri geliştirme. Yönetim panelleri, CMS ve e-ticaret platformları tasarlama ve kurma."
+      }
+    }
+  },
+  "contact": {
+    "title": "İletişime Geç",
+    "subtitle": "",
+    "form": {
+      "name": "İsim",
+      "name_placeholder": "İsminiz",
+      "email": "E-posta",
+      "email_placeholder": "example@domain.com",
+      "message": "Mesaj",
+      "message_placeholder": "Size nasıl yardımcı olabilirim?",
+      "submit": "Mesaj Gönder"
+    },
+    "info": {
+      "title": "Birlikte harika bir şey inşa edelim",
+      "desc": "Yenilikçi teknoloji projelerinde yazılım geliştirme, dağıtılmış sistem tasarımı veya herhangi bir işbirliği fırsatını tartışmaya her zaman açığım.",
+      "email_label": "Bana E-posta Gönder"
+    },
+    "footer": {
+      "rights": "Tüm hakları saklıdır.",
+      "built_with": "Next.js ve Tailwind CSS ile oluşturuldu"
+    }
+  }
+}
