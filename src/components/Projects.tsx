@@ -60,16 +60,35 @@ export function Projects() {
                 </div>
               )}
 
-              {/* Project Image Placeholder */}
-              <div
-                className={`h-48 w-full bg-gradient-to-tr ${project.color || 'from-blue-500/20 to-indigo-500/20'} flex items-center justify-center relative overflow-hidden`}
+              {/* Project Image */}
+              <Link 
+                href={`/${lang}/projects/${project.id}`}
+                className={`h-48 w-full bg-gradient-to-tr ${project.color || 'from-blue-500/20 to-indigo-500/20'} flex items-center justify-center relative overflow-hidden block group/img`}
               >
-                <Code className="w-16 h-16 text-foreground/20 group-hover/card:scale-110 transition-transform duration-500" />
-              </div>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                ) : (
+                  <Code className="w-16 h-16 text-foreground/20 group-hover/card:scale-110 transition-transform duration-500" />
+                )}
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="px-3.5 py-1.5 bg-background/90 text-foreground text-xs font-bold rounded-full shadow-lg backdrop-blur-sm">
+                    {projects.view_details || "عرض التفاصيل"}
+                  </span>
+                </div>
+              </Link>
 
               {/* Project Content */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-bold text-foreground mb-3">{project.title}</h3>
+                <Link href={`/${lang}/projects/${project.id}`} className="hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold text-foreground mb-3">{project.title}</h3>
+                </Link>
                 <p className="text-muted-foreground text-sm mb-6 leading-relaxed flex-1">
                   {project.description}
                 </p>
@@ -87,29 +106,38 @@ export function Projects() {
                 </div>
 
                 {/* Links */}
-                <div className="flex items-center gap-4 pt-4 border-t border-border mt-auto">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-                    >
-                      <FaGithub className="w-4 h-4" />
-                      <span>{projects.view_code}</span>
-                    </a>
-                  )}
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span>{projects.live_demo}</span>
-                    </a>
-                  )}
+                <div className="flex items-center justify-between gap-3 pt-4 border-t border-border mt-auto">
+                  <div className="flex items-center gap-3">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        <FaGithub className="w-3.5 h-3.5" />
+                        <span>{projects.view_code}</span>
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        <span>{projects.live_demo}</span>
+                      </a>
+                    )}
+                  </div>
+                  <Link
+                    href={`/${lang}/projects/${project.id}`}
+                    className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-primary/80 bg-primary/10 hover:bg-primary/20 px-3 py-1.5 rounded-lg transition-colors"
+                  >
+                    <span>{projects.view_details || "التفاصيل"}</span>
+                    <span className="rtl:rotate-180">→</span>
+                  </Link>
                 </div>
               </div>
             </motion.div>

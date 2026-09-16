@@ -14,41 +14,10 @@ export default function ProjectsPage() {
   const params = useParams();
   const lang = params.lang as string;
 
-  const projectList = [
-    {
-      title: projects.items?.routing?.title || "QoS Routing (RL)",
-      description: projects.items?.routing?.description || "RL Project",
-      tags: ["Java", "Swing", "Compiler Design", "Architecture"],
-      github: "#",
-      live: "#",
-      color: "from-blue-500/20 to-indigo-500/20",
-    },
-    {
-      title: projects.items?.packaging?.title || "Ambalaj Fabrikası",
-      description: projects.items?.packaging?.description || "Packaging Site",
-      tags: ["Next.js", "React", "CMS", "Tailwind CSS"],
-      github: "#",
-      live: null,
-      color: "from-purple-500/20 to-pink-500/20",
-    },
-    {
-      title: projects.items?.trendyol?.title || "Trendyol Clone",
-      description: projects.items?.trendyol?.description || "E-commerce platform",
-      tags: ["Node.js", "Express", "MongoDB Atlas", "REST API"],
-      github: "#",
-      live: "#",
-      color: "from-emerald-500/20 to-teal-500/20",
-    },
-    // Placeholder for more projects
-    {
-      title: "Portfolio Website",
-      description: "My personal portfolio website with multilingual support and dark mode.",
-      tags: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-      github: "#",
-      live: "#",
-      color: "from-orange-500/20 to-amber-500/20",
-    }
-  ];
+  const projectList = Object.entries(projects.items || {}).map(([key, value]: [string, any]) => ({
+    id: key,
+    ...value
+  }));
 
   return (
     <main className="min-h-screen bg-background flex flex-col">
@@ -79,25 +48,45 @@ export default function ProjectsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectList.map((project, index) => (
               <motion.div
-                key={project.title}
+                key={project.id || project.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-card border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group flex flex-col"
               >
-                <div className={`h-48 w-full bg-gradient-to-tr ${project.color} flex items-center justify-center relative overflow-hidden`}>
-                  <Code className="w-16 h-16 text-foreground/20 group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-background/10 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
+                <Link 
+                  href={`/${lang}/projects/${project.id}`}
+                  className={`h-48 w-full bg-gradient-to-tr ${project.color || 'from-blue-500/20 to-indigo-500/20'} flex items-center justify-center relative overflow-hidden block group/img`}
+                >
+                  {project.image ? (
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                  ) : (
+                    <Code className="w-16 h-16 text-foreground/20 group-hover:scale-110 transition-transform duration-500" />
+                  )}
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="px-3.5 py-1.5 bg-background/90 text-foreground text-xs font-bold rounded-full shadow-lg backdrop-blur-sm">
+                      {projects.view_details || "عرض التفاصيل"}
+                    </span>
+                  </div>
+                </Link>
 
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-foreground mb-3">{project.title}</h3>
+                  <Link href={`/${lang}/projects/${project.id}`} className="hover:text-primary transition-colors">
+                    <h3 className="text-xl font-bold text-foreground mb-3">{project.title}</h3>
+                  </Link>
                   <p className="text-muted-foreground text-sm mb-6 leading-relaxed flex-1">
                     {project.description}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag) => (
+                    {project.tags?.map((tag: string) => (
                       <span
                         key={tag}
                         className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-semibold"
@@ -107,29 +96,38 @@ export default function ProjectsPage() {
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-4 pt-4 border-t border-border mt-auto">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-                      >
-                        <FaGithub className="w-4 h-4" />
-                        <span>{projects.view_code}</span>
-                      </a>
-                    )}
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        <span>{projects.live_demo}</span>
-                      </a>
-                    )}
+                  <div className="flex items-center justify-between gap-3 pt-4 border-t border-border mt-auto">
+                    <div className="flex items-center gap-3">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 text-xs font-medium text-foreground hover:text-primary transition-colors"
+                        >
+                          <FaGithub className="w-3.5 h-3.5" />
+                          <span>{projects.view_code}</span>
+                        </a>
+                      )}
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 text-xs font-medium text-foreground hover:text-primary transition-colors"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          <span>{projects.live_demo}</span>
+                        </a>
+                      )}
+                    </div>
+                    <Link
+                      href={`/${lang}/projects/${project.id}`}
+                      className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-primary/80 bg-primary/10 hover:bg-primary/20 px-3 py-1.5 rounded-lg transition-colors"
+                    >
+                      <span>{projects.view_details || "التفاصيل"}</span>
+                      <span className="rtl:rotate-180">→</span>
+                    </Link>
                   </div>
                 </div>
               </motion.div>

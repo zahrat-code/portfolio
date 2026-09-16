@@ -63,10 +63,23 @@
     "view_code": "Kaynak Kod",
     "live_demo": "Canlı Önizleme",
     "view_all": "Tüm Projeleri Gör",
+    "view_details": "Proje Detaylarını Gör",
+    "back_to_projects": "Projeler'e Dön",
+    "overview": "Projeye Genel Bakış",
+    "features_title": "Temel Özellikler",
+    "gallery_title": "Proje Galerisi",
+    "tech_stack_title": "Kullanılan Teknolojiler ve Mimari",
     "items": {
       "n8n_automation": {
         "title": "n8n E-posta Otomasyonu Gönderimi",
         "description": "n8n iş akışlarını kullanarak kişiselleştirilmiş iş başvuruları ve CV'ler gönderen otomatik sistem.",
+        "longDescription": "n8n platformu üzerinde tasarlanmış, kişiselleştirilmiş iş başvuruları ve e-postaları otomatik olarak gönderen uçtan uca akıllı otomasyon sistemi. Alıcı listelerini okur, dinamik özgeçmiş eklerini ayrıştırır ve her bir kuruluşa özel e-posta içeriği üretir.",
+        "features": [
+          "n8n üzerinde çalışan akıllı ve tam otomatik iş akışı (workflow)",
+          "Her alıcı için dinamik özgeçmiş ve e-posta içeriği kişiselleştirme",
+          "Gönderim hatalarında otomatik yeniden deneme ve hata yakalama",
+          "Detaylı gönderim raporları ve merkezi log takibi"
+        ],
         "tags": [
           "n8n",
           "Automation",
@@ -75,11 +88,22 @@
         ],
         "github": "https://github.com/zahrat-code/n8n-Email-automation-send",
         "live": "",
-        "color": "from-blue-500/20 to-indigo-500/20"
+        "color": "from-blue-500/20 to-indigo-500/20",
+        "image": "/projects/n8n_automation.jpg",
+        "images": [
+          "/projects/n8n_automation.jpg"
+        ]
       },
       "route_finder": {
         "title": "Ağlarda Akıllı Rota Bulucu",
         "description": "Ağ topolojileri içinde en akıllı ve en optimize yönlendirme rotalarını hesaplamak ve görselleştirmek için tasarlanmış Python tabanlı yol bulma uygulaması.",
+        "longDescription": "Karmaşık ve dağıtık ağlar üzerinde veri yönlendirme algoritmalarını test etmek ve görselleştirmek için Python ile geliştirilmiş etkileşimli ağ simülatörü. En düşük gecikme süresi (latency) ve en verimli bant genişliği tüketimini sağlamak için Dijkstra ve QoS algoritmalarını uygular.",
+        "features": [
+          "Ağ düğümleri ve topolojisinin gerçek zamanlı grafiksel görselleştirmesi",
+          "Dijkstra ve QoS algoritmalarıyla anlık en kısa yol hesaplama",
+          "Düğüm kopması simülasyonu ve dinamik rota güncellemesi",
+          "Paket metrikleri, gecikme analizi ve veri akış paneli"
+        ],
         "tags": [
           "Python",
           "Algorithms",
@@ -88,11 +112,22 @@
         ],
         "github": "https://github.com/zahrat-code/Smart_Route_Finder_in_Networks",
         "live": "",
-        "color": "from-purple-500/20 to-pink-500/20"
+        "color": "from-purple-500/20 to-pink-500/20",
+        "image": "/projects/route_finder.jpg",
+        "images": [
+          "/projects/route_finder.jpg"
+        ]
       },
       "dental_clinic": {
         "title": "Diş Kliniği Veritabanı Sistemi",
         "description": "Diş klinikleri için hasta kayıtları, randevular ve tedavi geçmişini yönetmeye yönelik C# diliyle geliştirilmiş kapsamlı veritabanı yönetim sistemi.",
+        "longDescription": "Diş poliklinikleri ve muayenehaneler için tasarlanmış kapsamlı masaüstü yönetim yazılımı. Hekimlerin ve klinik personelinin hasta kayıtlarını, randevu takvimlerini, interaktif diş şeması (Odontogram) üzerinden tedavi aşamalarını ve mali faturalandırmayı yönetmesine olanak tanır.",
+        "features": [
+          "Klinik tedaviler ve dolgular için interaktif diş şeması (Odontogram)",
+          "Eksiksiz hasta kartı, tıbbi geçmiş ve röntgen/rapor takibi",
+          "Akıllı randevu planlama, otomatik hatırlatmalar ve faturalama",
+          "SQL Server altyapısıyla güvenli veritabanı ve yedekleme desteği"
+        ],
         "tags": [
           "C#",
           "SQL Server",
@@ -101,11 +136,21 @@
         ],
         "github": "https://github.com/zahrat-code/Dis_Klinik_Veritabani",
         "live": "",
-        "color": "from-emerald-500/20 to-teal-500/20"
+        "color": "from-emerald-500/20 to-teal-500/20",
+        "image": "/projects/dental_clinic.jpg",
+        "images": [
+          "/projects/dental_clinic.jpg"
+        ]
       },
       "computer_science": {
         "title": "OSSU Bilgisayar Bilimleri Müfredatı",
         "description": "Ücretsiz çevrimiçi üniversite derslerini kullanarak Bilgisayar Bilimlerinde lisans düzeyinde kendi kendine eğitim için eksiksiz müfredat yolu.",
+        "longDescription": "Dünya standartlarındaki OSSU kılavuzunu temel alan, lisans düzeyinde akademik bilgisayar bilimleri eğitim sürecini belgeleyen kapsamlı depo. Algoritmalar, veri yapıları, ayrık matematik, sistem tasarımı ve bilgisayar mimarisi konularında kod uygulamaları içerir.",
+        "features": [
+          "Temel bilgisayar bilimleri disiplinlerini kapsayan tam müfredat yolu",
+          "GitHub üzerinde belgelenmiş pratik ödev ve proje uygulamaları",
+          "Teknik mülakat hazırlığı ve yazılım mühendisliği referansları"
+        ],
         "tags": [
           "Computer Science",
           "Education",
@@ -114,7 +159,11 @@
         ],
         "github": "https://github.com/zahrat-code/computer-science",
         "live": "",
-        "color": "from-orange-500/20 to-amber-500/20"
+        "color": "from-orange-500/20 to-amber-500/20",
+        "image": "/projects/computer_science.jpg",
+        "images": [
+          "/projects/computer_science.jpg"
+        ]
       }
     }
   },
@@ -151,8 +200,8 @@
       "submit": "Mesaj Gönder"
     },
     "info": {
-      "title": "Birlikte harika bir şey inşa edelim",
-      "desc": "Yenilikçi teknoloji projelerinde yazılım geliştirme, dağıtılmış sistem tasarımı veya herhangi bir işbirliği fırsatını tartışmaya her zaman açığım.",
+      "title": "Size nasıl yardımcı olabilirim? Bir fikriniz mi var? Gelin gerçeğe dönüştürelim.",
+      "desc": "Web ve uygulama geliştirme, süreç otomasyonu ve teknik sistem tasarımı konularında işbirliğine hazırım.",
       "email_label": "Bana E-posta Gönder"
     },
     "footer": {

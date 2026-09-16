@@ -63,10 +63,23 @@
     "view_code": "Source Code",
     "live_demo": "Live Demo",
     "view_all": "View All Projects",
+    "view_details": "View Project Details",
+    "back_to_projects": "Back to Projects",
+    "overview": "Project Overview",
+    "features_title": "Key Features",
+    "gallery_title": "Project Gallery",
+    "tech_stack_title": "Technologies & Stack",
     "items": {
       "n8n_automation": {
         "title": "n8n Email Automation Send",
         "description": "Automated system to send personalized job applications and CVs using n8n workflows.",
+        "longDescription": "A robust end-to-end automated pipeline created with n8n to send tailored job applications and outreach emails. It reads recipient data, extracts dynamic attachments, and customizes email copies per recipient while preventing spam folder delivery with automated verification and logging.",
+        "features": [
+          "End-to-end automation workflow built on n8n",
+          "Dynamic email content & CV attachment customization per recipient",
+          "Automated retry mechanisms and error handling for failed deliveries",
+          "Comprehensive logging and execution metrics dashboard"
+        ],
         "tags": [
           "n8n",
           "Automation",
@@ -75,11 +88,22 @@
         ],
         "github": "https://github.com/zahrat-code/n8n-Email-automation-send",
         "live": "",
-        "color": "from-blue-500/20 to-indigo-500/20"
+        "color": "from-blue-500/20 to-indigo-500/20",
+        "image": "/projects/n8n_automation.jpg",
+        "images": [
+          "/projects/n8n_automation.jpg"
+        ]
       },
       "route_finder": {
         "title": "Smart Route Finder in Networks",
         "description": "Python-based pathfinding application designed to calculate and visualize the smartest and most optimal routing paths within network topologies.",
+        "longDescription": "An interactive Python network routing simulation tool designed to test, visualize, and benchmark pathfinding algorithms across complex distributed networks. Implements Dijkstra's algorithm and QoS routing to determine optimal latency and bandwidth-efficient routes.",
+        "features": [
+          "Interactive graph visualization of network nodes and topologies",
+          "Real-time Dijkstra and QoS shortest-path computation",
+          "Node failure simulation and dynamic re-routing adaptation",
+          "Packet metrics, latency analysis, and throughput tracking"
+        ],
         "tags": [
           "Python",
           "Algorithms",
@@ -88,11 +112,22 @@
         ],
         "github": "https://github.com/zahrat-code/Smart_Route_Finder_in_Networks",
         "live": "",
-        "color": "from-purple-500/20 to-pink-500/20"
+        "color": "from-purple-500/20 to-pink-500/20",
+        "image": "/projects/route_finder.jpg",
+        "images": [
+          "/projects/route_finder.jpg"
+        ]
       },
       "dental_clinic": {
         "title": "Dental Clinic Database System",
         "description": "A comprehensive database management system designed in C# for dental clinics to manage patient records, appointments, and treatment history.",
+        "longDescription": "A full-featured desktop management system tailored for dental clinics and practices. Empowers dentists and administrative staff to manage patient histories, appointment calendars, treatment sessions with an interactive odontogram dental chart, and billing operations.",
+        "features": [
+          "Interactive dental chart (Odontogram) for clinical procedures and fillings",
+          "Complete patient records, medical history, and treatment logs",
+          "Smart appointment scheduling, reminders, and invoicing system",
+          "Secure Microsoft SQL Server database with automated backups"
+        ],
         "tags": [
           "C#",
           "SQL Server",
@@ -101,11 +136,21 @@
         ],
         "github": "https://github.com/zahrat-code/Dis_Klinik_Veritabani",
         "live": "",
-        "color": "from-emerald-500/20 to-teal-500/20"
+        "color": "from-emerald-500/20 to-teal-500/20",
+        "image": "/projects/dental_clinic.jpg",
+        "images": [
+          "/projects/dental_clinic.jpg"
+        ]
       },
       "computer_science": {
         "title": "OSSU Computer Science Curriculum",
         "description": "A complete curriculum path for a self-taught B.Sc. level education in Computer Science using free online university courses.",
+        "longDescription": "A structured academic repository documenting the comprehensive self-taught Computer Science degree curriculum following OSSU standards. Covers algorithms, discrete mathematics, system design, computer architecture, and distributed systems with documented code implementations.",
+        "features": [
+          "Full curriculum path covering core computer science disciplines",
+          "Practical assignments and projects implemented in GitHub repositories",
+          "Systematic references for technical software engineering interviews"
+        ],
         "tags": [
           "Computer Science",
           "Education",
@@ -114,7 +159,11 @@
         ],
         "github": "https://github.com/zahrat-code/computer-science",
         "live": "",
-        "color": "from-orange-500/20 to-amber-500/20"
+        "color": "from-orange-500/20 to-amber-500/20",
+        "image": "/projects/computer_science.jpg",
+        "images": [
+          "/projects/computer_science.jpg"
+        ]
       }
     }
   },
@@ -151,8 +200,8 @@
       "submit": "Send Message"
     },
     "info": {
-      "title": "Let's build something great together",
-      "desc": "I am always open to discussing software development, distributed systems design, or any collaborative opportunities in innovative tech projects.",
+      "title": "How can I help you? Have an idea? Let's turn it into reality.",
+      "desc": "Ready to collaborate on web and app development, process automation, and system architecture design.",
       "email_label": "Email Me"
     },
     "footer": {
