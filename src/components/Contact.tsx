@@ -14,12 +14,24 @@ export function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [emailError, setEmailError] = useState(false);
+  const [emailTouched, setEmailTouched] = useState(false);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const isValidEmail = (emailStr: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailStr.trim());
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !message.trim()) return;
+
+    if (!isValidEmail(email)) {
+      setEmailTouched(true);
+      setEmailError(true);
+      return;
+    }
 
     setLoading(true);
     setStatus('idle');
@@ -30,7 +42,7 @@ export function Contact() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email: email.trim(), message }),
       });
 
       if (response.ok) {
@@ -38,6 +50,8 @@ export function Contact() {
         setName("");
         setEmail("");
         setMessage("");
+        setEmailTouched(false);
+        setEmailError(false);
       } else {
         setStatus('error');
       }
@@ -126,10 +140,37 @@ export function Contact() {
                     required
                     disabled={loading}
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all disabled:opacity-50"
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (emailTouched) {
+                        setEmailError(!isValidEmail(e.target.value));
+                      }
+                    }}
+                    onBlur={() => {
+                      setEmailTouched(true);
+                      if (email.trim()) {
+                        setEmailError(!isValidEmail(email));
+                      }
+                    }}
+                    className={`w-full px-4 py-3 bg-background border rounded-lg focus:ring-2 outline-none transition-all disabled:opacity-50 ${
+                      emailError
+                        ? 'border-red-500 focus:ring-red-500/30 text-red-500'
+                        : 'border-border focus:ring-primary focus:border-primary text-foreground'
+                    }`}
                     placeholder={contact.form.email_placeholder}
                   />
+                  {emailError && (
+                    <p className="text-xs text-red-500 font-medium flex items-center gap-1.5 mt-1">
+                      <span className="text-sm">⚠️</span>
+                      <span>
+                        {locale === 'ar'
+                          ? 'يرجى إدخال بريد إلكتروني صالح (مثال: name@gmail.com)'
+                          : locale === 'tr'
+                          ? 'Lütfen geçerli bir e-posta adresi girin (örn: name@gmail.com)'
+                          : 'Please enter a valid email address (e.g. name@gmail.com)'}
+                      </span>
+                    </p>
+                  )}
                 </div>
               </div>
               <div className="space-y-2">
