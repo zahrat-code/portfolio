@@ -9,17 +9,25 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'All fields (name, email, message) are required.' }, { status: 400 });
     }
 
+    const emailUser = process.env.EMAIL_USER;
+    const emailPass = process.env.EMAIL_PASS ? process.env.EMAIL_PASS.replace(/\s+/g, '') : undefined;
+
+    if (!emailUser || !emailPass) {
+      console.error('EMAIL_USER or EMAIL_PASS environment variables are missing on Vercel.');
+      return NextResponse.json({ error: 'Server configuration error: Email credentials are not configured.' }, { status: 500 });
+    }
+
     // Configure Mail Transporter using the same variables as the OTP system
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: emailUser,
+        pass: emailPass,
       },
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: emailUser,
       to: 'alialzahrat387@gmail.com', // Sending directly to the user's email
       subject: `New Message from Portfolio Website: ${name}`,
       text: `You have received a new contact form message from your portfolio website:\n\n` +
